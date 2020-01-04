@@ -1,6 +1,11 @@
 # CSCI2270
 This repository contains various topics and examples of my work in Data Structures at CU Boulder.
 
+COURSE TOPICS
+Studies data abstractions (e.g., stacks, queues, lists, trees) and their representation techniques (e.g.,
+linking, arrays). Introduces concepts used in algorithm design and analysis including criteria for selecting
+data structures to fit their applications.
+
 In this course, students will:
 * Document code including precondition/postcondition contracts for functions and invariants for classes.
 * Create and recognize appropriate test data for simple problems, including testing boundary conditions and creating/running test cases.
