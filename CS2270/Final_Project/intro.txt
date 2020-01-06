@@ -1,0 +1,12 @@
+The year is 2118. 
+Agent Bert Macklin of the Galactic Bureau of Investigation is searching 
+for the infamous space pirate, <mom's or dad's name> Von Booty. 
+Your mission is to help Agent Macklin find and arrest, 
+<mom or dad> Von Booty before the next crime takes place. 
+There's two places where Von Booty could be hiding, 
+either the ice planet, <Fast food restaurant 1>, 
+or the desert planet, <fast food retaurant_2>. 
+
+You must choose!
+
+  

@@ -1,0 +1,3 @@
+Here is some information
+stored on 3 different
+lines in the f ile.

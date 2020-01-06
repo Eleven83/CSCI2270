@@ -1,0 +1,4 @@
+The following are extremely helpful links that will complement what we learned in class.
+
+Text Matter - http://pages.cs.wisc.edu/~vernon/cs367/notes/11.PRIORITY-Q.html
+Visualization Link - https://www.cs.usfca.edu/~galles/visualization/Heap.html

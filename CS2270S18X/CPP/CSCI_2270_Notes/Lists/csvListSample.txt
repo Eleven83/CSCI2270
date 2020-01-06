@@ -1,0 +1,10 @@
+321, Jeff, Math
+846, Karen, Science
+459, Shuug, History
+468, Larry, English
+589, Kip, Math
+213, Dopey, History
+987, Mike, Science
+147, Judy, Chemistry
+639, Herb, Science
+471, Bilbo, Math

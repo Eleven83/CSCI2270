@@ -1,0 +1,12 @@
+Adam 0 1
+Bob 1 10
+Charles 2 20
+Dan 3 30
+Eric 4 40
+Frank 5 50
+Greg 10 100
+Hank 9 90
+Irma 8 80
+Juliet 7 70
+Ken 6 60
+Lisa 5 45

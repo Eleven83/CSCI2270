@@ -1,0 +1,886 @@
+
+				Midterm 2 Study Guide and Cheat Sheet
+----------------------------------------------------------------------------------------------
+
+Practice MCQs
+-----------------------
+
+MCQ_1:
+========================
+Q1: The following class declaration would be used to create which data structure?
+
+	class Node
+	{
+		int data;
+		vector<Node*> adj;
+	}
+
+a)Binary Search Tree
+b)Hash Table
+c)Heap
+d)Graph
+
+Correct answer: d
+
+Q2: Which of these structures would be the most useful when storing a social media used by billions of people,
+where the main feature is a search bar that lets users look up other users by entering their name?
+
+a)Binary Search Tree
+b)Hash Table
+c)Heap
+d)Graph
+
+Correct answer: b
+
+Q3: What will be printed when the following code is run:
+
+	struct Node
+	{
+    		int key;
+    		Node* left;
+	    	Node* right;
+
+	    	//parameterized constructor
+	    	Node(int k)
+    		{
+        		this->key=k;
+        		this->left=this->right=NULL;
+    		}
+	};
+
+	void print(Node* n)
+	{
+    		if(n==NULL)
+        		return;
+		std::cout<<n->key<<" ";
+		print(n->left);
+    		print(n->right);
+	}
+
+	int main()
+	{
+    		Node* root=new Node(12);
+    		root->left=new Node(6);
+    		root->right=new Node(15);
+    		root->left->left=new Node(2);
+    		root->left->right=new Node(8);
+    		print(root);
+	}
+
+a)2 8 6 15 12
+b)15 12 8 6 2
+c)12 6 2 8 15
+d)2 6 8 12 15
+
+Correct answer: c
+
+Q4: Which of the following algorithms could be used to find the shortest path between two points on a grid?
+
+a)Upward Heap repair
+b)Breadth-first search
+c)Depth-first search
+d)Recursive Traversal
+
+Correct answer: b
+
+Q5: Given a hash table with 4 boxes that uses a suitably random hash function, what is the largest number of elements that you can insert
+while being certain that there is no collision on the table?
+
+a)1
+b)2
+c)3
+d)4
+
+Correct answer: a
+
+
+MCQ_2:
+=========================
+
+Q1: The preorder traversal sequence of a binary search tree is 30, 20, 10, 15, 25, 23, 39, 35, 42.
+Which one of the following is the postorder traversal sequence of the same tree?
+a. 10, 20, 15, 23, 25, 35, 42, 39, 30
+b. 15, 10, 25, 23, 20, 42, 35, 39, 30
+c. 15, 20, 10, 23, 25, 42, 35, 39, 30
+d. 15, 10, 23, 25, 20, 35, 42, 39, 30
+
+Correct answer: d
+
+Q2: What will be printed when the following code is run?
+	#include <iostream>
+	struct Node {
+		int key;
+		Node* left;
+		Node* right;
+		Node(int k) {
+			this->key = k;
+			this->right = this->left = NULL;
+		}
+	};
+	void print(Node* n, int k) {
+		if (n == NULL) return;
+		if ( n->key %2 == 0) {
+			std::cout << n->key << � �;
+		}
+		print(n->left, k);
+		print(n->right, k);
+	}
+
+	int main() {
+		Node* root = new Node(12);
+		root->left = new Node(6);
+		root->right = new Node(15);
+		root->left->left = new Node(2);
+		root->right->right = new Node(8);
+		print(root, 0);
+	}
+
+a. 12 6 2 8
+b. 12 2 8
+c. 12 6 2 15 8
+d. 12 8 6 2
+
+Correct answer: a
+
+Q3: Consider a full binary tree where node in the tree has an address to the head of a linked list of length 10.
+This means that there is a linked list at every node of the tree which is of length 10. What is the maximum number of comparisons done to search for an
+element in this arrangement if the height of the full binary tree is 3. Assume that all elements are unique.
+
+a. 7
+b. 60
+c. 150
+d. 70
+
+Correct answer: d
+
+Q4: Consider a Hash Table of size 10. Collisions in this Hash Table are resolved using chaining.
+After insertion of a certain number of elements, the length of the chain in each of the Hash Table slots are as follows:
+
+Slot-1: 3
+Slot-2: 5
+Slot-3: 6
+Slot-4: 0
+Slot-5: 5
+Slot-6: 1
+Slot-7: 9
+Slot-8: 10
+Slot-9: 21
+Slot-10: 20
+
+What is the number of collisions caused due to the insertion of the elements?
+
+a. 71
+b. 81
+c. 91
+d. 61
+
+Correct answer: a
+
+
+Q5: Which of the following is an advantage of adjacency list representation over adjacency matrix representation of a graph?
+
+a. In adjacency list representation, space is saved for sparse graphs
+b. DFS and BFS can be done in O(V + E) time for adjacency list representation. These operations take O(V^2) time in adjacency matrix representation.
+   Here is V and E are number of vertices and edges respectively
+c. Adding a vertex in adjacency list representation is easier than adjacency matrix representation
+d. All of the above
+
+Correct answer: d
+
+
+Q6: Consider an undirected unweighted graph G. Let a breadth-first traversal of G be done starting from a node r.
+    Let d(r, u) and d(r, v) be the lengths of the shortest paths from r to u and v respectively, in G.
+    If u is visited before v during the breadth-first traversal, which of the following statements is correct?
+
+a. d(r, u) < d (r, v)
+b. d(r, u) > d(r, v)
+c. d(r, u) <= d (r, v)
+d. None of the above
+
+Correct answer: c
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Lecture Quizzes
+---------------
+
+Q: The first node in the linked list is called ______________ and the last node is called ________________.
+A: Head, Tail
+
+Q: A linked list node can be implemented in C++ using a:
+A:Class or a struct
+
+Q: In a singly linked list, a node, x, contains a pointer to another node, n1, which can be thought of as x knows about n1,
+and therefore, it�s possible to traverse from x to n1 and vice versa.
+A: False
+
+Q: While traversing a singly linked list, we access each node using:
+A: Pointers
+
+Q: What is the complexity of inserting a node in a linked list after the node "prev" with a function prototype
+	insertNode(Node* head, Node* prev, Node* newNode)
+   where "head" is the head of the list and "newNode" is the node to be inserted?
+A: O(1)
+
+Q: The head and tail of the list are stored as ____________ variables, and the methods to initialize the list,
+	add and delete nodes, traverse the list, and search the list are ______________.
+A: private, public
+
+Q: What is the correct sequence of steps to follow when deleting a node from the middle of a linked list?
+
+	i. Create a pointer(called left) to the head of the list.
+
+	ii. Delete the tmp node
+
+	iii. If the node is found, update the left.next pointer to bypass tmp and point to the node after tmp, which is tmp.next.
+
+	iv. Create a pointer(called tmp) to point to head.next.
+
+	v. Iterate through the list until the value to be deleted has been found. At this point in the algorithm,
+           left will be pointing to the preceding node and tmp will be the node to delete.
+A: i, iv, v, iii, ii
+
+Q: The key of a Linked List can be of struct data type.
+A: True
+
+Q: Which of the following data structures follows a last-in-first-out process?
+A: Stack
+
+Q: Which data structure can a stack use in its implementation?
+A: linked list
+
+Q: The method of adding an element to the __________ of the stack is called _____________.
+   The method of removing an element from the _____________ of the stack is called ______________.
+A: top, push. top, pop.
+
+Q: In an linked list implementation of a stack, data elements are stored in a linked list and the top of the stack refers to the index where the next element will be added.
+A: False
+
+Q: You have a list and a node like the ones depicted below:
+	head                                     tail
+     	_____	  _____     _____     _____     _____
+	|   |---> |   |---> |   |---> |   |---> |   |
+	|8  |<--- |8  |<--- |8  |<--- |8  |<--- |8  |
+	-----     -----     -----     -----     -----
+         tmp
+			    _____
+			    |   |
+                            | 6 |
+                            -----
+                              n
+
+After the following code runs:
+
+	tmp = tmp->next->next;
+	n->previous = head;
+	head->next = n;
+	n->next = tmp->previous;
+	n->next->previous = n;
+
+What is the order of the node values in the list if you traverse the list from tail to head?
+
+A: 7 5 3 2 6 8
+
+Q: You have a list, depicted below.
+	head                                     tail
+     	_____	  _____     _____     _____     _____
+	|   |---> |   |---> |   |---> |   |---> |   |
+	|12 |<--- |16 |<--- |11 |<--- |17 |<--- |20 |
+	-----     -----     -----     -----     -----
+
+The following code runs:
+	temp = tail->prev->prev;
+	temp->prev->next = temp->next;
+	temp->next->prev = temp->prev;
+	temp->next  = NULL;
+	temp->prev = NULL;
+
+What is the node order when traversing the list from tail to head? Write each number separated by a single space.
+A: 20 17 16 12
+
+Q: Consider the following structure:
+	struct Node {
+   		Node *prev;
+   		int key;
+   		Node *next;
+	};
+
+	_____	  _____     _____     _____     _____
+	|   |---> |   |---> |   |---> |   |---> |   |
+	|3  |<--- |7  |<--- |10 |<--- |5  |<--- |12 |
+	-----     -----     -----     -----     -----
+
+Consider a pointer named head that points to the first node in the linked list, a pointer named tail that points to the last node,
+a pointer named temp that points to the node with value 10 and a node named newnode with the value 15.
+
+After executing following code:
+	newnode->prev = temp;
+	temp->next->prev = newnode;
+	newnode->next = temp->next;
+	temp->next = newnode;
+
+What will be the output if we print the linked list from tail to head?
+A: 12 5 15 10 7 3
+
+Q: When an element is added to the _______________ of the queue and it is __________________.
+   When an element is  removed  from the ___________ of the queue it is ______________.
+A: tail, enqueued, head, dequeued
+
+Q: When we dequeue an element in a circular queue the position of the head doesn�t change, but the tail shifts by one.
+A: False
+
+Q: In linked list implementation of a queue, head and tail pointers are tracked. Which of these pointers will change during an insertion into EMPTY queue?
+   Head pointer points to the first element and the tail pointer points to the last element of the queue.
+A: Both head and tail pointer.
+
+Q: A queue, if implemented using an array of size MAX_SIZE, gets full when _______________ where Front has the index of
+   the first element of the queue and Rear has the index of the last element of the queue.
+A: Rear = MAX_SIZE-1
+
+Q: Given the following tree, which nodes are leaf nodes? Select all that apply!
+     K
+   / | \
+  M  R   T
+  |  | \
+  Q  Y   X
+
+A:  T, Q, Y, X
+
+Q: What must a function have to be considered a recursive function? Select all that apply!
+A: The function calls itself inside the function, A conditional that eventually becomes true to stop the recursion
+
+Q: Consider the node structure for a linked list.
+
+	struct Node{
+            int data;
+            struct Node *next;
+	};
+
+The following code is for finding a key in a linked list passed as head.  What is the worst case complexity of the function? The linked list has n nodes.
+	bool findKey(Node* head, int key)
+	{
+	    Node* temp=head;
+	    while(temp)
+	    {
+	        if(temp->data==key)
+		    return true;
+		temp=temp->next;
+	    }
+	    return false;
+	}
+
+A: O(n)
+
+Q: Given the following tree, which nodes are leaf nodes? Select all that apply!
+     K
+   / | \
+  M  R   T
+  |  | \
+  Q  Y   X
+
+A: T, Q, Y, X
+
+Q: Which of the following is true based on the below tree?
+
+                               7
+                             /   \
+                           5       9
+                          / \     /  \
+                         3   6   8    15
+                        /
+                       100
+
+A: node 8 is a leaf
+
+Q: For the following array of integers, build a BST. What does the final tree look like?
+[4, 65, 23, 34, 1, 32, 100, 2]
+
+A: 			     4
+		      /     \
+		    1        65
+		     \       /  \
+		      2     23   100
+                              \
+                               34
+                              /
+                             32
+
+Q: For a BST,  traversing the tree in the following sequences are called (i)________________ , (ii)_____________ ,and  (iii)_____________ respectively?
+
+	i. root, left, right
+
+	ii. left, root, right
+
+	iii. left, right, root
+
+A: preorder,inorder,postorder
+
+Q: For the following tree what would be preorder traversal sequence would be:
+
+                A
+              /   \
+             B	   C
+            / \   / \
+           D   E F   G
+
+A: A B D E C F G
+
+Q: If you were asked to print the elements of a BST in a strictly ascending order, which traversal of the tree would you print?
+A: inorder
+
+Q: Where would the smallest and the largest number, respectively, reside in a Full Binary Search tree?
+A: left-most leaf node, right-most leaf node
+
+Q: Which of the following is true based on the below tree?
+
+                               6
+                             /   \
+                           4       10
+                            \     /  \
+                             5   9    13
+                                     /  \
+                                    11   14
+
+A: this tree is a BST.
+
+Q: Which of the following is true based on the below tree?
+
+                               6
+                             /   \
+                           4       10
+                         /  \     /  \
+                        2    5   9    13
+                                     /  \
+                                    11   14
+A: node 5 is a leaf.
+
+Q: You are given a hash function f(x) = x % 5, where x is the value to be hashed and f(x) is the hash address. Linear probing is used to resolve collisions.
+The hash function receives the input {7, 6, 4, 12, 10} in that order. Place each number in the hash table at its correct address..
+	Address	0	1	2	3	4
+A:              10      6       7       12      4
+
+Q: Which of the following is true regarding hashing?
+A: A collision occurs when a hash function evaluates to an index in the table that is already occupied
+
+Q: Below is a hash table with separate chaining, and a linked list. Hash function is given as f(x) = x % 10.
+   What is the number of comparisons needed to search for a key of 41 in each data structure?
+   One comparison is one operation and one call to a hash function is one operation. You can ignore all operations that are not a comparison or call to a hash function .
+
+   |91|-->|23|-->| 4|-->|94|-->|74|-->|73|-->|41|-->|53|-->|61|-->|12|
+
+   |91|->|41|->|61|
+   |12|
+   |23|->|73|->|53|
+   | 4|->|94|->|74|
+
+1.Number of operations required to search for element 41 in the linked list?
+	Answer 1:
+2. Number of operations required to search for element 41 in the hash table?
+	Answer 2:
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+LECTURE NOTES W/ CODE
+------------------------
+
+This is all stored in Folder CS2270.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+The Chromium Projects
+----------------------
+C++ Dos and Don'ts
+-------------------
+A Note About Usage
+Unlike the style guide, the content of this page is advisory, not required. You can always deviate from something on this page,
+if the relevant author/reviewer/OWNERS agree that another course is better.
+
+Minimize Code in Headers
+Don't include unneeded headers
+If a file isn't using the symbols from some header, remove the header.  It turns out that this happens frequently in the Chromium codebase due to refactoring.
+Move inner classes into the implementation
+You can also forward declare classes inside a class:
+
+class Whatever {
+ public:
+  /* ... */
+ private:
+  struct DataStruct;
+  std::vector<DataStruct> data_;
+};
+
+Any headers that DataStruct needed no longer need to be included in the header file and only need to be included in the implementation. This will often let you pull includes out of the header. For reference, the syntax in the implementation file is:
+
+struct Whatever::DataStruct {
+};
+
+Note that sometimes you can't do this because certain STL data structures require the full definition at declaration time (most notably, std::deque and the STL adapters that wrap it).
+Move static implementation details to the implementation whenever possible
+If you have the class in a header file:
+
+#include "BigImplementationDetail.h"
+class PublicInterface {
+  public:
+   /* ... */
+  private:
+   static BigImplementationDetail detail_;
+};
+
+You should try to move that from a class member into the anonymous namespace in the implementation file:
+
+namespace {
+BigImplementationDetail g_detail;
+}  // namespace
+
+That way, people who don't use your interface don't need to know about or care about BigImplementationDetail.
+
+You can do this for helper functions, too.  Note that if there is more than one class in the .cc file, it can aid clarity to define your file-scope helpers in an anonymous namespace just above the class that uses them, instead of at the top of the file.
+
+Stop inlining code in headers
+BACKGROUND: Unless something is a cheap accessor or you truly need it to be inlined, don't ask for it to be inlined.  Remember that definitions inside class declarations are implicitly requested to be inlined.
+
+class InlinedMethods {
+  InlinedMethods() {
+    // This constructor is equivalent to having the inline keyword in front
+    // of it!
+  }
+  void Method() {
+    // Same here!
+  }
+};
+Stop inlining complex methods.
+class DontDoThis {
+ public:
+  int ComputeSomething() {
+    int sum =0;
+    for (int i = 0; i < limit; ++i) {
+      sum += OtherMethod(i, ... );
+    }
+    return sum;
+  }
+};
+
+A request to inline is merely a suggestion to the compiler, and anything more than a few operations on integral data types will probably not be inlined.  However, every file that has to use an inline method will also emit a function version in the resulting .o, even if the method was inlined. (This is to support function pointer behavior properly.)  Therefore, by requesting an inline in this case, you're likely just adding crud to the .o files which the linker will need to do work to resolve.
+If the method has significant implementation, there's also a good chance that by not inlining it, you could eliminate some includes.
+Stop inlining virtual methods
+You can't inline virtual methods under most circumstances, even if the method would otherwise be inlined because it's very short. The compiler must do runtime dispatch on any virtual method where the compiler doesn't know the object's complete type, which rules out the majority of cases where you have an object.
+Stop inlining constructors and destructors
+Constructors and destructors are often significantly more complex than you think they are, especially if your class has any non-POD data members. Many STL classes have inlined constructors/destructors which may be copied into your function body. Because the bodies of these appear to be empty, they often seem like trivial functions that can safely be inlined.  Don't give in to this temptation.  Define them in the implementation file unless you really need them to be inlined.  Even if they do nothing now, someone could later add something seemingly-trivial to the class and make your hundreds of inlined destructors much more complex.
+
+Even worse, inlining constructors/destructors prevents you from using forward declared variables:
+
+class Forward;
+class WontCompile {
+ public:
+   // THIS WON'T COMPILE, BUT IT WOULD HAVE IF WE PUT THESE IN THE
+   // IMPLEMENTATION FILE!
+   //
+   // The compiler needs the definition of Forward to call the
+   // vector/scoped_ptr ctors/dtors.
+   Example() { }
+   ~Example() { }
+
+ private:
+  std::vector<Forward> examples_;
+  scoped_ptr<Forward> super_example_;
+};
+
+For more information, read Item 30 in Effective C++.
+When you CAN inline constructors and destructors
+C++ has the concept of a trivial destructor. If your class has only POD types and does not explicitly declare a destructor, then the compiler will not bother to generate or run a destructor.
+
+struct Data {
+  Data() : count_one(0), count_two(0) {}
+  // No explicit destructor, thus no implicit destructor either.
+
+  // The members must all be POD for this trick to work.
+  int count_one;
+  int count_two;
+};
+
+In this example, since there is no inheritance and only a few POD members, the constructor will be only a few trivial integer operations, and thus OK to inline.
+
+For abstract base classes with no members, it's safe to define the (trivial) destructor inline:
+
+class Interface {
+ public:
+  virtual ~Interface() {}
+
+  virtual void DoSomething(int parameter) = 0;
+  virtual int GetAValue() = 0;
+};
+
+But be careful; these two "interfaces" don't count:
+
+class ClaimsToBeAnInterface : public base:RefCounted<ClaimsToBeAnInterface> {
+ public:
+  virtual ~ClaimsToBeAnInterface() { /* But derives from a template! */ }
+};
+
+class HasARealMember {
+ public:
+  virtual void InterfaceMethod() = 0;
+  virtual ~HasARealMember() {}
+
+ protected:
+  vector<string> some_data_;
+};
+If in doubt, don't rely on these sorts of exceptions.  Err on the side of not inlining.
+Be careful about your accessors
+Not all accessors are light weight. Compare:
+
+class Foo {
+ public:
+  int count() const { return count_; }
+
+ private:
+  int count_;
+};
+
+Here the accessor is trivial and safe to inline.  But the following code is probably not, even though it also looks simple:
+
+struct MyData {
+  vector<GURL> urls_;
+  base::Time last_access_;
+};
+
+class Manager {
+ public:
+  MyData get_data() { return my_data_; }
+
+ private:
+  MyData my_data_;
+};
+
+The underlying copy constructor calls for MyData are going to be complex. (Also, they're going to be synthesized, which is bad.)
+What about code outside of headers?
+For classes declared in .cc files, there's no risk of bloating several .o files with the definitions of the same "inlined" function.  While there are other, weaker arguments to continue to avoid inlining, the primary remaining consideration is simply what would make code most readable.
+
+This is especially true in testing code.  Test framework classes don't tend to be instantiated separately and passed around as objects; they're effectively just bundles of file-scope functionality coupled with a mechanism to reset state between tests.  In these cases, defining the test functions inline at their declaration sites has little negative effect and can reduce the amount of "boilerplate" in the test file.
+
+Different reviewers may have different opinions here; use good judgment.
+
+Static variables
+Dynamic initialization of function-scope static variables is now threadsafe in Chromium (per standard C++11 behavior). Before 2017, this was thread-unsafe, and base::LazyInstance was widely used. This is no longer necessary. Background can be found in this thread and this thread.
+
+void foo() {
+    static int ok_count = ComputeTheCount();  // OK now, previously a problem.
+    static int good_count = 42;  // C++03 3.6.2 says this is done before dynamic initialization, so probably thread-safe.
+    static constexpr int better_count = 42;  // Even better, as this will now likely be inlined at compile time.
+    static auto& object = *new Object;  // For class types.
+}
+Variable initialization
+There are myriad ways to initialize variables in C++11.  Prefer the following general rules:
+
+Use assignment syntax when performing "simple" initialization with one or more literal values which will simply be composed into the object:
+
+int i = 1;
+std::string s = "Hello";
+std::pair<bool, double> p = {true, 2.0};
+std::vector<std::string> v = {"one", "two", "three"};
+
+Using '=' here is no less efficient than "()" (the compiler won't generate a temp + copy), and ensures that only implicit constructors are called, so readers seeing this syntax can assume nothing complex or subtle is happening.  Note that "{}" are allowed on the right side of the '=' here (e.g. when you're merely passing a set of initial values to a "simple" struct/container constructor; see below items for contrast).
+
+Use constructor syntax when construction performs significant logic, uses an explicit constructor, or in some other way is not intuitively "simple" to the reader:
+
+MyClass c(1.7, false, "test");
+std::vector<double> v(500, 0.97);  // Creates 500 copies of the provided initializer
+
+Use C++11 "uniform init" syntax ("{}" without '=') only when neither of the above work:
+
+class C {
+ public:
+  explicit C(bool b) { ... };
+  ...
+};
+class UsesC {
+  ...
+ private:
+  C c{true};  // Cannot use '=' since C() is explicit (and "()" is invalid syntax here)
+};
+
+class Vexing {
+ public:
+  explicit Vexing(const std::string& s) { ... };
+  ...
+};
+void func() {
+  Vexing v{std::string()};  // Using "()" here triggers "most vexing parse";
+                            // "{}" is arguably more readable than "(())"
+  ...
+
+Never mix uniform init syntax with auto, since what it deduces is unlikely to be what was intended:
+
+auto x{1};  // Until C++17, decltype(x) is std::initializer_list<int>, not int!
+
+Prefer structs over pairs/tuples when used repeatedly
+The Google style guide recommends using return values over outparams.  For functions which return multiple values, a convenient way to do this is to return a pair or tuple:
+
+std::pair<int, int> GetPaddingValues() {
+  ...
+  return {1, 2};  // Shorter and more readable than std::make_pair(), works with tuples also.
+}
+
+However, this return type can be cumbersome, opaque, and error-prone.  An alternative is to define a struct with named fields:
+
+struct PaddingValues {
+  int header;
+  int footer;
+};
+PaddingValues GetPaddingValues() {
+  ...
+  return {1, 2};  // This abbreviated syntax still works!
+}
+
+In exchange for a longer definition, callers can now refer to a named type and named fields, and returning an instance of the struct is still (usually) terse.
+
+A good rule of thumb for when to prefer a struct is whenever you'd find declaring a type alias for the pair or tuple beneficial, which is usually whenever it's used more than just as a local one-off.
+
+Prefer std::make_unique to base::WrapUnique
+std::make_unique<Type>(...) and base::WrapUnique(new Type(...)) are equivalent. make_unique should be preferred, because it is harder to use unsafely than WrapUnique. In general, bare calls to "new" require careful scrutiny. Bare calls to "new" are currently required to construct reference-counted types; however, reference counted types themselves require careful scrutiny.
+
+    return std::unique_ptr<C>(new C(1, 2, 3));  // BAD: type name mentioned twice
+    return base::WrapUnique(new C(1, 2, 3));    // BAD: bare call to new
+    return std::make_unique<C>(1, 2, 3);        // GOOD
+
+Notes:
+Never friend make_unique to work around constructor access restrictions. It will allow anyone to construct the class. Use WrapUnique in this case.
+
+class Bad {
+ public:
+  std::unique_ptr<Bad> Create() { return std::make_unique<Bad>(); }
+  // ...
+
+ private:
+  Bad();
+  // ...
+  friend std::unique_ptr<Bad> std::make_unique<Bad>();  // Lost access control
+};
+
+class Okay {
+ public:
+  // For explanatory purposes. If Create() adds no value, it is better just
+  // to have a public constructor instead.
+  std::unique_ptr<Okay> Create() { return base::WrapUnique(new Okay()); }
+  // ...
+
+ private:
+  Okay();
+  // ...
+};
+
+WrapUnique(new Foo) and WrapUnique(new Foo()) mean something different if Foo does not have a user-defined constructor. Don't make future maintainers guess whether you left off the '()' on purpose. Use make_unique<Foo>() instead. If you're intentionally leaving off the "()" as an optimisation, please leave a comment.
+
+    auto a = base::WrapUnique(new A); // BAD: "()" omitted intentionally?
+    auto a = std::make_unique<A>();   // GOOD
+
+    // "()" intentionally omitted to avoid unnecessary zero-initialisation.
+    // WrapUnique() does the wrong thing for array pointers.
+    auto array = std::unique_ptr<A[]>(new A[size]);
+
+Do not use auto to deduce a raw pointer
+The use of the auto keyword to deduce the type from the initializing expression is encouraged when it improves readability. However, do not use auto when the type would be deduced to be a pointer type. This can cause confusion. Instead, prefer specifying the "pointer" part outside of auto:
+
+    auto item = new Item();  // BAD: auto deduces to Item*, type of |item| is Item*
+    auto* item = new Item(); // GOOD: auto deduces to Item, type of |item| is Item*
+Use const correctly
+TLDR: For safety and simplicity, don't return pointers or references to non-const objects from const methods.  Within that constraint, mark methods as const where possible.  Avoid const_cast to remove const, except when implementing non-const getters in terms of const getters.
+A brief primer on const
+To the compiler, the const qualifier on a method refers to physical constness: calling this method does not change the bits in this object.  What we want is logical constness, which is only partly overlapping: calling this method does not affect the object in ways callers will notice, nor does it give you a handle with the ability to do so.
+
+Mismatches between these concepts can occur in both directions.  When something is logically but not physically const, C++ provides the mutable keyword to silence compiler complaints.  This is valuable for e.g. cached calculations, where the cache is an implementation detail callers do not care about.  When something is physically but not logically const, however, the compiler will happily accept it, and there are no tools that will automatically save you.  This discrepancy usually involves pointers.  For example,
+
+void T::Cleanup() const { delete pointer_member_; }
+
+Deleting a member is a change callers are likely to care about, so this is probably not logically const.  But because delete does not affect the pointer itself, but only the memory it points to, this code is physically const, so it will compile.
+
+Or, more subtly, consider this pseudocode from a node in a tree:
+
+class Node {
+ public:
+  void RemoveSelf() { parent_->RemoveChild(this); }
+  void RemoveChild(Node* node) {
+    if (node == left_child_)
+      left_child_ = nullptr;
+    else if (node == right_child_)
+      right_child_ = nullptr;
+  }
+  Node* left_child() const { return left_child_; }
+  Node* right_child() const { return right_child_; }
+
+ private:
+  Node* parent_;
+  Node* left_child_;
+  Node* right_child_;
+};
+
+The left_child() and right_child() methods don't change anything about |this|, so making them const seems fine.  But they allow code like this:
+
+void SignatureAppearsHarmlessToCallers(const Node& node) {
+  node.left_child()->RemoveSelf();
+  // Now |node| has no |left_child_|, despite having been passed in by const ref.
+}
+
+The original class definition compiles, and looks locally fine, but it's a timebomb: a const method returning a handle that can be used to change the system in ways that affect the original object.  Eventually, someone will actually modify the object, potentially far away from where the handle is obtained.
+
+These modifications can be difficult to spot in practice.  As we see in the previous example, splitting related concepts or state (like "a tree") across several objects means a change to one object affects the behavior of others.  And if this tree is in turn referred to by yet more objects (e.g. the DOM of a web page, which influences all sorts of other data structures relating to the page), then small changes can have visible ripples across the entire system.  In a codebase as complex as Chromium, it can be almost impossible to reason about what sorts of local changes could ultimately impact the behavior of distant objects, and vice versa.
+
+"Logically const correct" code assures readers that const methods will not change the system, directly or indirectly, nor allow callers to easily do so.  They make it easier to reason about large-scale behavior.  But since the compiler verifies physical constness, it will not guarantee that code is actually logically const.  Hence the recommendations here.
+Classes of const (in)correctness
+In a larger discussion of this issue, Matt Giuca postulated three classes of const (in)correctness:
+Const correct: All code marked "const" is logically const; all code that is logically const is marked "const".
+Const okay: All code marked "const" is logically const, but not all code that is logically const is marked "const".  (Basically, if you see "const" you can trust it, but sometimes it's missing.)
+Const broken: Some code marked "const" is not logically const.
+The Chromium codebase currently varies.  A significant amount of Blink code is "const broken".  A great deal of Chromium code is "const okay".  A minority of code is "const correct".
+
+While "const correct" is ideal, it can take a great deal of work to achieve.  Const (in)correctness is viral, so fixing one API often requires a yak shave.  (On the plus side, this same property helps prevent regressions when people actually use const objects to access the const APIs.)
+
+At the least, strive to convert code that is "const broken" to be "const okay".  A simple rule of thumb that will prevent most cases of "const brokenness" is for const methods to never return pointers to non-const objects.  This is overly conservative, but less than you might think, due to how objects can transitively affect distant, seemingly-unrelated parts of the system.  The discussion thread linked above has more detail, but in short, it's hard for readers and reviewers to prove that returning pointers-to-non-const is truly safe, and will stay safe through later refactorings and modifications.  Following this rule is easier than debating about whether individual cases are exceptions.
+
+One way to ensure code is "const okay" would be to never mark anything const.  This is suboptimal for the same reason we don't choose to "never write comments, so they can never be wrong".  Marking a method "const" provides the reader useful information about the system behavior.  Also, despite physical constness being different than logical constness, using "const" correctly still does catch certain classes of errors at compile time. Accordingly, the Google style guide requests the use of const where possible, so mark methods const when they are logically const.
+
+Making code more const correct leads to cases where duplicate const and non-const getters are required:
+
+const T* Foo::GetT() const { return t_; }
+T* Foo::GetT() { return t_; }
+
+If the implementation of GetT() is complex, there's a trick to implement the non-const getter in terms of the const one, courtesy of Effective C++:
+
+T* Foo::GetT() { return const_cast<T*>(static_cast<const Foo*>(this)->GetT()); }
+
+While this is a mouthful, it does guarantee the implementations won't get out of sync and no const-incorrectness will occur.  And once you've seen it a few times, it's a recognizable pattern.
+
+This is probably the only case where you should see const_cast used to remove constness.  Its use anywhere else is generally indicative of either "const broken" code, or a boundary between "const correct" and "const okay" code that could change to "const broken" at any future time without warning from the compiler.  Both cases should be fixed.
+
+Prefer to use =default
+Use =default to define special member functions where possible, even if the default implementation is just {}. Be careful when defaulting move operations. Moved-from objects must be in a valid but unspecified state, i.e., they must satisfy the class invariants, and the default implementations may not achieve this.
+
+
+class Good {
+ public:
+  // We can, and usually should, provide the default implementation separately
+  // from the declaration.
+  Good();
+
+  // Use =default here for consistency, even though the implementation is {}.
+  ~Good() = default;
+  Good(const Good& other) = default;
+
+ private:
+  std::vector<int> v_;
+};
+
+Good::Good() = default;
+
+What are the advantages of =default?
+Compiler-defined copy and move operations don't need maintenance every time members are added or removed.
+Compiler-provided special member functions can be "trivial" (if defaulted in the class), and can be better optimized by the compiler and library.
+Types with defaulted constructors can be aggregates (if defaulted in the class), and hence support aggregate initialization. User provided constructors disqualify a class from being an aggregate.
+Defaulted functions are constexpr if the implicit version would have been (and if defaulted in the class).
+Using =default consistently helps readers identify customized operations.

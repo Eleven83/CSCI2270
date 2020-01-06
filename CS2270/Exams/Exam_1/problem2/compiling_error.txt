@@ -1,0 +1,11 @@
+C:\Users\ryhof\Desktop\CS2270\problem2\problem2.cpp: In function 'int main()':
+C:\Users\ryhof\Desktop\CS2270\problem2\problem2.cpp:75:21: error: 'head' was not declared in this scope
+     swapHeadAndTail(head);
+                     ^~~~
+C:\Users\ryhof\Desktop\CS2270\problem2\problem2.cpp:75:21: note: suggested alternative: 'fread'
+     swapHeadAndTail(head);
+                     ^~~~
+                     fread
+C:\Users\ryhof\Desktop\CS2270\problem2\problem2.cpp:75:5: error: 'swapHeadAndTail' was not declared in this scope
+     swapHeadAndTail(head);
+     ^~~~~~~~~~~~~~~

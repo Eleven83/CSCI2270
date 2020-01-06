@@ -1,0 +1,4 @@
+This problem was difficult because I was trying to do it without a previous pointer.
+It should run fine in Atom using the standard run command. The nodes for the linked
+list are created manually in the main() function and you can add more nodes using
+the obj.createNode() call and passing in any integer number. 

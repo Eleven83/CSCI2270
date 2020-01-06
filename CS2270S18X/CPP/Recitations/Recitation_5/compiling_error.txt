@@ -1,0 +1,18 @@
+C:\Users\ryhof\Downloads\CSCI_2270\CPP_Files\Recitations\Recitation_5\doublyLL.cpp:50:6: error: prototype for 'void doublyLL::delElm(Node*, int)' does not match any in class 'doublyLL'
+ void doublyLL::delElm(Node *head, int idVal)
+      ^~~~~~~~
+In file included from C:\Users\ryhof\Downloads\CSCI_2270\CPP_Files\Recitations\Recitation_5\doublyLL.cpp:2:0:
+C:\Users\ryhof\Downloads\CSCI_2270\CPP_Files\Recitations\Recitation_5\doublyLL.h:21:8: error: candidate is: void doublyLL::delElm(Node, std::__cxx11::string)
+   void delElm(Node, string);
+        ^~~~~~
+C:\Users\ryhof\Downloads\CSCI_2270\CPP_Files\Recitations\Recitation_5\doublyLL.cpp:78:6: error: prototype for 'void doublyLL::dispItem(Node*)' does not match any in class 'doublyLL'
+ void doublyLL::dispItem(Node *head)
+      ^~~~~~~~
+In file included from C:\Users\ryhof\Downloads\CSCI_2270\CPP_Files\Recitations\Recitation_5\doublyLL.cpp:2:0:
+C:\Users\ryhof\Downloads\CSCI_2270\CPP_Files\Recitations\Recitation_5\doublyLL.h:22:8: error: candidate is: void doublyLL::dispItem()
+   void dispItem();
+        ^~~~~~~~
+C:\Users\ryhof\Downloads\CSCI_2270\CPP_Files\Recitations\Recitation_5\doublyLL.cpp: In function 'Node* searchLL(Node*, std::__cxx11::string)':
+C:\Users\ryhof\Downloads\CSCI_2270\CPP_Files\Recitations\Recitation_5\doublyLL.cpp:90:15: error: 'struct Node' has no member named 'item'
+   if(current->item == target)
+               ^~~~

@@ -1,0 +1,46 @@
+presidents,George Washington,John Adams,Thomas Jefferson,James Madison,James Monroe,John Quincy Adams,Andrew Jackson,Martin Van Buren,William Henry Harrison,John Tyler,James K Polk,Zachary Taylor,Millard Fillmore,Franklin Pierce,James Buchanan,Abraham Lincoln,Andrew Johnson,Ulysses S Grant,Rutherford B Hayes,James Garfield,Chester A Arthur,Grover Cleveland,Benjamin Harrison,Grover Cleveland,William McKinley,Theodore Roosevelt,William Howard Taft,Woodrow Wilson,Warren G Harding,Calvin Coolidge,Herbert Hoover,Franklin D Roosevelt,Harry S Truman,Dwight D Eisenhower,John F Kennedy,Lyndon B Johnson,Richard M Nixon,Gerald R Ford,James Carter,Ronald Reagan,George HW Bush,William J Clinton,George W Bush,Barack Obama,Donald J Trump
+George Washington,0,-1,-1,-1,-1,-1,-1,-1,663,487,-1,-1,-1,-1,-1
+John Adams,-1,0,-1,-1,982,640,-1,-1,-1,-1,215,-1,-1,-1,-1
+Thomas Jefferson,-1,-1,0,-1,1130,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+James Madison,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,1162,-1,-1,1095
+James Monroe,-1,982,1130,-1,0,344,-1,-1,-1,-1,-1,-1,-1,-1,-1
+John Quincy Adams,-1,640,-1,-1,344,0,-1,-1,-1,-1,-1,-1,-1,-1,-1
+Andrew Jackson,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,989,408,-1,-1
+Martin Van Buren,-1,-1,-1,-1,-1,-1,-1,0,159,-1,-1,-1,-1,-1,-1
+William Henry Harrison,663,-1,-1,-1,-1,-1,-1,159,0,864,-1,-1,-1,-1,-1
+John Tyler,487,-1,-1,-1,-1,-1,-1,-1,864,0,-1,-1,-1,-1,-1
+James K Polk,-1,215,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1
+Zachary Taylor,-1,-1,-1,1162,-1,-1,989,-1,-1,-1,-1,0,635,173,185
+Millard Fillmore,-1,-1,-1,-1,-1,-1,408,-1,-1,-1,-1,635,0,-1,-1
+Franklin Pierce,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,173,-1,0,142
+James Buchanan,-1,-1,-1,1095,-1,-1,-1,-1,-1,-1,-1,185,-1,142,0
+Abraham Lincoln,
+Andrew Johnson,
+Ulysses S Grant,
+Rutherford B Hayes,
+James Garfield,
+Chester A Arthur,
+Grover Cleveland,
+Benjamin Harrison,
+Grover Cleveland,
+William McKinley,
+Theodore Roosevelt,
+William Howard Taft,
+Woodrow Wilson,
+Warren G Harding,
+Calvin Coolidge,
+Herbert Hoover,
+Franklin D Roosevelt,
+Harry S Truman,
+Dwight D Eisenhower,
+John F Kennedy,
+Lyndon B Johnson,
+Richard M Nixon,
+Gerald R Ford,
+James Carter,
+Ronald Reagan,
+George HW Bush,
+William J Clinton,
+George W Bush,
+Barack Obama,
+Donald J Trump,

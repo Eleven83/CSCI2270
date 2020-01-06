@@ -1,0 +1,3 @@
+cities,Boulder,Denver
+Boulder,-1,30
+Denver,30,-1

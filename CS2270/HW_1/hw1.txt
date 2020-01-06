@@ -1,0 +1,40 @@
+CSCI 2270 - Data Structures
+Professor: Shayon Gupta, Fall 2018
+TA: Saumya Sinha
+Author: Ryan A. Hoffman
+
+The purpose of this assignment is to review some fundamentals of C++ programming 
+to better assess my understanding and identify some strengths and weaknesses in my knowledge. 
+
+The objectives include:
+	1. Read-in command line arguments
+	2. Read a file
+	3. Loop through an array
+	4. Split a string
+	5. Create an array of structs
+	6. Pass by reference
+	7. Create a class with constructors
+	8. Create header files with header guards
+
+The assignment is broken down into three different problems. 
+Each problem requires implementation of some combination of the above listed objectives.
+
+These are to be submitted for grading through Moodle.
+
+Problem 1:
+This requires the creation of a function called insertIntoSortedArray().
+The declaration is given to us as: 
+	int insertIntoSortedArray(int myArray[], int numEntries, int newValue);
+The specifics are in the write-up, however, the main idea here is that I need to read in a 
+file name from the command line and the file is just a list of integers each on their own line. 
+	Like this:
+		59
+		17
+		24
+		99
+		.
+		.
+		.
+Each line is a number therefore each line gets stored in an int array of size 100.  
+Now, the function, insertIntoSortedArray(), will get passed our sorted array of ints, 
+the actual number of filled entries in that array, and a new value to be added. 

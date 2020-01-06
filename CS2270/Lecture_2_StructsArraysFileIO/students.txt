@@ -1,0 +1,10 @@
+1, Frank, CSCI
+2, Jessica, Art
+3, Sara, Science
+4, Geoff, Math
+5, Ned, CSCI
+6, Bud, Biology
+7, Candice, Chemistry
+8, Toby, Business
+9, Fraz, CSCI
+10, Bill, Aerospace

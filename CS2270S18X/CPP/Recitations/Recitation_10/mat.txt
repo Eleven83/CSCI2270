@@ -1,0 +1,5 @@
+dest/source Boulder Denver NewMexico Texas
+Boulder 0 30 200 500
+Denver 30 0 170 400
+NewMexico 200 170 0 50
+Texas 500 400 50 0

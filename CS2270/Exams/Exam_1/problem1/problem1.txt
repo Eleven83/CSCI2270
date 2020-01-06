@@ -1,0 +1,14 @@
+////////////////////   TEST 1   /////////////////////
+Displaying All Nodes
+3 -> 9 -> 2 -> 4 -> NULL
+2
+
+////////////////////   TEST 2   /////////////////////
+Displaying All Nodes
+3 -> 9 -> NULL
+3
+
+////////////////////   TEST 3   /////////////////////
+Displaying All Nodes
+3 -> NULL
+-1
